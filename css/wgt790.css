@@ -1,0 +1,418 @@
+@media print{
+    color: black;
+    background-color: white;
+}
+.masterFrameBody{
+    /*font-family: "Courier New", Courier, monospace;*/
+    font-family: 'Dancing Script', cursive;
+    margin: 0 60px 0 60px;
+}
+.childFrameBody{
+    font-family: 'Dancing Script', cursive;
+    margin: 0 0 0 0;
+}
+p{
+    color: #993300;
+    text-align: center;
+    font-size: 16pt;
+}
+#timeoutPopup {
+    display:none;
+    position:relative;
+    margin: 24px 24px 24px 24px;
+    border:solid 1px #999999;
+    background-color:#dddddd;
+    text-align:center;
+}
+#site_banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 360px;
+    height: 90px;
+}
+#user_auth{
+    position: relative;
+    float: right;
+    height: 90px;
+}
+#close_btn{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 8px 8px 0px 0px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/close1.png'), url('/images/close2.png');
+    background-size: contain, 0px;
+    background-repeat: no-repeat;
+}
+#close_btn:hover{
+    background-size: 0px, contain;
+}
+#user-icon{
+    margin-top: 10px;
+    float: right;
+    width: 70px;
+    height: 70px;
+    background-image: url('/images/user_icon_2.png'), url('/images/user_icon_2_on.png');
+    background-size: contain, 0px;
+    background-repeat: no-repeat;
+}
+#user-icon:hover{
+    background-size: 0px, contain;
+}
+#event-request{
+    margin-right: 12px;
+    float: right;
+    width: 120px;
+    height: 80px;
+    background-image: url('/images/event_request_2.png'), url('/images/event_request_2_on.png');
+    background-size: contain, 0px;
+    background-repeat: no-repeat;
+}
+#event-request:hover{
+    background-size: 0px, contain;
+}
+#user_man{
+    position: absolute;
+    z-index: 100000;
+    display: none;
+    top: 0px;
+    right: 0px;
+    border: solid 1px #e0ebeb;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: #009900;
+    padding: 28px;
+    background: -webkit-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    background: -o-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb);
+    background: -moz-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    background: radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb);
+    /* "Invalid", but works in 6-8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb)";
+    opacity: .9;
+}
+#loginForm{ }
+table.loginForm td{
+    text-align: right;
+}
+table.loginForm td:nth-child(even){
+    text-align: left;
+}
+table.loginForm td:only-child{
+    text-align: center;
+}
+.childFrameBody .fc-day:hover{
+    cursor: pointer;
+    background-color: gold;
+}
+#homeDiv{
+    clear: both;
+}
+.notResizing{
+    float: left;
+    clear: left;
+    width: 45%;
+    /*height: 400px;*/
+    max-width: 600px;
+}
+div.carousel{
+    clear: both;
+    border: solid 1px #e0ebeb;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: #009900;
+    text-align: center;
+    padding: 12px;
+    background: -webkit-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    background: -o-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb);
+    background: -moz-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    background: radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb)";
+    opacity: .9;
+}
+.carousel_link:hover{
+    cursor: pointer;
+}
+#hotspot_left{
+    float: left;
+    margin-top: 10px;
+    max-width: 46%;
+    font-size: 18pt;
+    text-align: center;
+    border: solid 1px #e0ebeb;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: #009900;
+    text-align: left;
+    padding: 12px;
+    background: -webkit-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb)";
+    opacity: .9;
+    /*text-shadow: 1px 1px 1px #CCCCCC;*/
+}
+#hotspot_right{
+    float: right;
+    margin-top: 10px;
+    max-width: 46%;
+    font-size: 12pt;
+    text-align: center;
+    border: solid 1px #e0ebeb;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: #009900;
+    text-align: left;
+    padding: 12px;
+    background: -webkit-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb)";
+    opacity: .9;
+    /*text-shadow: 1px 1px 1px #CCCCCC;*/
+}
+#div_daHead{
+    position: relative;
+}
+#div_daBody{
+    visibility: hidden;
+    margin-top: 18px;
+    clear: both;
+    border: solid 1px #e0ebeb;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: #009900;
+    text-align: center;
+    padding: 12px;
+    background: -webkit-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    background: -o-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb);
+    background: -moz-radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    background: radial-gradient(#FFFFFF, #FFFFFF, #e0ebeb); 
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#e0ebeb)";
+    opacity: .9;
+}
+#div_daFoot{
+    border: solid 1px #663300;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    background: -webkit-radial-gradient(#663300, #FFFF00); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#663300, #FFFF00); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(#663300, #FFFF00); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#663300, #FFFF00); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#663300, endColorstr=#FFFF00);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#663300, endColorstr=#FFFF00)";
+}
+#div_iframeBody{
+    clear: both;
+    color: #009900;
+    text-align: center;
+    padding: 12px;
+    opacity: .9;
+}
+#iframe_daBody{
+    border: 0;
+    margin: 0px;
+    width: 100%;
+    height: 0px;
+    opacity: .9;
+}
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+/*-=-=-=-=-=-=-=-=-=-=-=- BEGIN: TOP NAVIGATION section -=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+div.daMenuDiv{
+    z-index: 420;
+    margin: 10px 0px 10px 10px;
+    border-radius: 15px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 14px;
+    font-weight: 800;
+    color: #FF0000;
+}
+div.daRootLevel{
+    z-index: 420;
+    float: left;
+    padding: 0px 3px 0px 3px;
+}
+div.daNextLevel{
+    z-index: 420;
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    text-align: center;
+}
+A.daMenuLink{
+    text-decoration: none;
+    display: block;
+    width: 175px;
+    padding: 2px 0px 2px 0px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 14px #000;
+    color: white;
+    background: -webkit-radial-gradient(#FF0000, #0000FF); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#FF0000, #0000FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(#FF0000, #0000FF); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#FF0000, #0000FF); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FF0000, endColorstr=#0000FF);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FF0000, endColorstr=#0000FF)";
+}
+A.daMenuLink:link{
+    border: solid 1px #0000FF;
+    background-color: #66FF66;
+    color: white;
+}
+A.daMenuLink:visited{
+    border: solid 1px #0000FF;
+    background-color: #66FF66;
+    color: white ;
+}
+A.daMenuLink:hover{
+    text-decoration: none;
+    border: solid 1px #FF0000;
+    background-color: #FF9900;
+    background: -webkit-radial-gradient(#FF0000, #009900, #FF0000); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#FF0000, #009900, #FF0000); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(#FF0000, #009900, #FF0000); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#FF0000, #009900, #FF0000); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FF0000, endColorstr=#0000FF);
+    /* Valid, works in 8-9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FF0000, endColorstr=#0000FF)";
+}
+/*-=-=-=-=-=-=-=-=-=-=-=- END: daMenu.js section -=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*-=-=-=-=-=-=-=-=-=- START: BACKGROUND SLIDESHOW STYLES -=-=-=-=-=-=-=-=-=-*/
+.canvas_wrapper{
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.site_bg_canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#canvas1{
+    z-index: -1;
+}
+#canvas2{
+    z-index: -2;
+}
+#canvas3{
+    z-index: -3;
+}
+.site_bg{
+    /* Set rules to fill background */
+    min-width: 100%;
+    min-height: 100%;
+
+    /* Set up proportionate scaling */
+    width: auto;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: fadeImage;
+    animation-duration: 5s;
+}
+.bgFade{
+    animation-name: fadeImage;
+    animation-duration: 5s;
+}
+@-webkit-keyframes fadeImage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeImage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#dbgi{
+    position: absolute;
+    z-index: -4;
+    top: 0;
+    left: 0;
+    display: none;
+    /*
+    animation-name: fadeImage;
+    animation-duration: 10s;
+    */
+}
+#dbgi2{
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    display: none;
+    /*
+    animation-name: fadeImage;
+    animation-duration: 20s;
+    */
+}
+#dbgi3{
+    position: absolute;
+    z-index: -6;
+    top: 0;
+    left: 0;
+    display: none;
+    /*
+    animation-name: fadeImage;
+    animation-duration: 30s;
+    */
+}
+div.chevron{
+    position: fixed;
+    top: 35%;
+    width: 40px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.chevron:hover{
+    cursor: pointer;
+}
+div.chevronLeft{
+    float: left;
+    left: 5px;
+    background-image: url(../images/icon-chevron-big-left.png);
+}
+div.chevronRight{
+    float: right;
+    right: 5px;
+    background-image: url(../images/icon-chevron-big-right.png);
+}
+/*-=-=-=-=-=-=-=-=-=- END: BACKGROUND SLIDESHOW STYLES -=-=-=-=-=-=-=-=-=-*/

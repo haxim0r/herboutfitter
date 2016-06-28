@@ -1,0 +1,115 @@
+CREATE USER 'darthTreb'@'%' IDENTIFIED BY 'hn3#jfdb^3gy2!O4';
+GRANT ALL PRIVILEGES ON herbNoutfitter.* TO 'darthTreb'@'%';
+FLUSH PRIVILEGES;
+
+CREATE TABLE `herbNoutfitter`.`user` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `subscribed` varchar(5) DEFAULT 'no',
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `zip` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+insert into user values(null,'yes','rez','rez','rez','rez','rez','rez','rez','rez','rez','administrator','active');
+
+--drop table site_topnav;
+CREATE TABLE `herbNoutfitter`.`site_topnav` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `text` VARCHAR(45),
+  `href` VARCHAR(200),
+  `title` VARCHAR(45),
+  `sort` SMALLINT DEFAULT 100,
+  `parent` VARCHAR(45) DEFAULT '#',
+  `status` VARCHAR(7) DEFAULT 'new',
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+--truncate table site_topnav;
+insert into site_topnav values(null,'Adminstrator', '#', 'Site administration console', 100, '#', 'new');
+insert into site_topnav values(null,'Navigation', 'javascript: navigate(\'apps/admin/topnav.php\')', 'Site navigation console', 100, '1', 'new');
+insert into site_topnav values(null,'Background', 'javascript: navigate(\'apps/admin/background.php\')', 'Site background slideshow console', 100, '1', 'new');
+insert into site_topnav values(null,'Logout', '?logout', 'Logout', 1000, '#', 'new');
+
+CREATE TABLE `herbNoutfitter`.`site_bg` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45),
+  `type` VARCHAR(45),
+  `dimensions` VARCHAR(45),
+  `image` LONGBLOB,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+
+CREATE TABLE `herbNoutfitter`.`event_type` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45),
+  `title` VARCHAR(45),
+  `description` TEXT,
+  `start` DATETIME,
+  `end` DATETIME,
+  `price` DECIMAL,
+  `limit` SMALLINT,
+  `poster` MEDIUMBLOB,
+  `created_by` INTEGER UNSIGNED,
+  `status` VARCHAR(45),
+  `sort` SMALLINT,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+
+CREATE TABLE `herbNoutfitter`.`event` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type` INTEGER UNSIGNED,
+  `name` VARCHAR(45),
+  `title` VARCHAR(45),
+  `description` TEXT,
+  `start` DATETIME,
+  `end` DATETIME,
+  `price` DECIMAL,
+  `limit` SMALLINT,
+  `poster` MEDIUMBLOB,
+  `created_by` INTEGER UNSIGNED,
+  `status` VARCHAR(45),
+  `sort` SMALLINT,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+
+CREATE TABLE `herbNoutfitter`.`news` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(100),
+  `content` TEXT,
+  `created_by` INTEGER UNSIGNED,
+  `status` VARCHAR(45),
+  `created_on` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+
+CREATE TABLE `herbNoutfitter`.`registration` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user` INTEGER UNSIGNED,
+  `event` INTEGER UNSIGNED,
+  `event_type` INTEGER UNSIGNED,
+  `event_date` DATETIME UNSIGNED,
+  `created_on` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `status` VARCHAR(7) DEFAULT 'new',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `herbNoutfitter`.`reg_user` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `registration` INTEGER UNSIGNED,
+  `user` INTEGER UNSIGNED,
+  `status` VARCHAR(7),
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
