@@ -1,5 +1,5 @@
-CREATE USER 'darthTreb'@'%' IDENTIFIED BY 'hn3#jfdb^3gy2!O4';
-GRANT ALL PRIVILEGES ON herbNoutfitter.* TO 'darthTreb'@'%';
+CREATE USER 'darthTreb'@'%' IDENTIFIED BY '___';
+GRANT ALL PRIVILEGES ON herbNoutfitter.* TO '___'@'%';
 FLUSH PRIVILEGES;
 
 CREATE TABLE `herbNoutfitter`.`user` (
